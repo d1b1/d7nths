@@ -1,0 +1,25 @@
+<?php
+
+/*
+ * This implements the hook_menu() haaaaa
+ * 
+ * I have placed all the soon to be helper functions into 
+ * separate files so each can be read as a separate and independent
+ * program. Maybe.
+ *
+ */
+function d7nths_menu() {
+
+  $items['admin/structure/types/export'] = array(
+    'title'            => t('Export'),
+    'description'      => t('Provides the ability to export a content type.'),
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('d7nths_export_form'),
+    'access arguments' => array('access content'),
+    'type'             => MENU_LOCAL_ACTION,
+    'weight'           => 100,
+    'file'             => 'd7nths.export.inc',
+  );
+
+  return $items;
+}
