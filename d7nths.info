@@ -1,0 +1,6 @@
+name = D7 NTHs
+description = Drupal 7 nice-to-have(s) helpers and solutions.
+core = 7.x
+version = "7.x-0.1"
+core = "7.x"
+
